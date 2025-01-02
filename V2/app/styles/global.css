@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'MyLogo';
+    src:url('BungeeShade-Regular.ttf'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth !important; 
+}
+
+img {
+    max-width: 100% !important; 
+}
+
+body {
+    margin: 0 auto;
+    background: #363636; 
+    padding: 0;
+    font-family: "Open Sans", serif;
+    font-size: 14px;
+}
+
+.rouge_one {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+
+.rouge_two {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    background: #ecf0f1 url(/app/img/back.png);
+    background-size: 30%;
+    overflow: hidden;
+    color: #000; 
+    width: 100%;
+    height: 577px;
+    margin-top: 60px; 
+    padding: 50px; 
+    box-shadow: 0px 0px 30px #000;
+}
+
+.auto {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1050px;
+}
+
+.logo {
+    font-family: MyLogo;
+    font-size: 40px;
+}
+
+nav {
+    display: flex;
+    float: right;
+    margin-top: -33px;
+    margin-right: -20px;
+    position:relative;
+    z-index: 9;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+nav > ul > li {
+    justify-content: center;
+    display: flex;
+    margin-right: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px 0.5px rgba(0,0,0,0.3);
+    &:hover {
+        background: #ecf0f1;
+        cursor: pointer;
+        border: 1px solid #fff;
+        transition: all 0.2s;
+        opacity: 0.8;
+    }
+}
+
+.up_top {
+    margin-top: -20px;
+}
+
+.right_Heyjesuis {
+    float: right;
+    width: 470px;
+    text-align: center;
+}
+
+.heyIamTexte {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    font-size: 60px;
+}
+
+p {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    font-size: 40px;
+}
+  
+.animation {
+height:100px;
+overflow:hidden;
+margin-left: 1rem;
+}
+
+.animation > div > div {
+padding: 0.25rem 0.75rem;
+height:230px; 
+display:inline-block;
+}
+
+.animation div:first-child {
+animation: text-animation 8s infinite;
+}
+
+.first div {
+background-color:transparent;
+font-size: 30px;
+text-transform: uppercase;
+font-family: "Anton", serif;
+font-weight: 400;
+font-style: normal;
+letter-spacing: 0.5px;
+font-size: 87px;
+}
+.second div {
+background-color:transparent;
+font-size: 30px;
+text-transform: uppercase;
+font-family: "Anton", serif;
+font-weight: 400;
+font-style: normal;
+letter-spacing: 0.5px;
+font-size: 87px;
+} 
+
+@keyframes text-animation {
+0% {margin-top: -3px;}
+10% {margin-top: -3px;}
+20% {margin-top: -5rem;}
+30% {margin-top: -5rem;}
+40% {margin-top: -8.7rem;}
+60% {margin-top: -8.7rem;}
+90% {margin-top: -3px;}
+100% {margin-top: -3px;} 
+}
+
+.btn__project {
+    background: #363636; 
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s; 
+    cursor: pointer;
+    color: white;
+    position:relative;
+    z-index: 9;
+    font-size: 16px; 
+    box-shadow: 0 1px 0 3px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-top: 50px;
+    border-radius: 5px; 
+    transform: translatey(0px);
+    animation: down 1s ease-in-out infinite;  
+    letter-spacing: 1px;     
+    font-family: "Open Sans", serif;
+    &:hover {
+        background: #171717;
+        cursor: pointer;
+        margin-top: 50px;
+    }
+} 
+
+#hover {
+    animation: lefting 3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+#hover_deux {
+    transform: scale(0);
+    cursor: pointer;
+}
+
+@keyframes lefting {
+    0% { 
+        transform: translatex(0px);
+    }
+
+    50% { 
+        transform: translatex(-9px);
+    }
+
+    100% { 
+        transform: translatex(0px);
+    }
+}
+
+#content {
+    overflow: visible;
+    max-height: 0; /* Contenu caché par défaut */
+    transition: max-height 0.5s ease-out; /* Transition pour un effet fluide */
+  }
+  
+  #content.visible {
+    max-height: 800px; /* Ajustez selon la hauteur maximale attendue */
+  }
+   
